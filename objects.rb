@@ -33,11 +33,53 @@ class Elevator
 		@floor = floor
 	end
 
-	def method_name
-		
+	def go_up
+		if floor < 12
+			@floor += 1
+			self.cheery_greeting
+		else
+			puts "Ye canna a go tha highhh!"
+		end
 	end
 
+	def go_down
+		if floor > 1
+			@floor -= 1
+			self.cheery_greeting
+		else
+			puts "You are as low as you can go, bud."
+		end
+	end
 
-
-
+	def cheery_greeting
+		if @floor == 1
+			puts "You are currently trapped in a haunted elevator on the #{floor}st floor..."
+		else
+			puts "You are currently trapped in a haunted elevator on the #{floor}th floor..."
+		end
+	end
 end
+
+haunted_elevator = Elevator.new(1)
+
+
+haunted_elevator.go_down
+haunted_elevator.cheery_greeting
+haunted_elevator.go_up
+haunted_elevator.go_up
+haunted_elevator.go_up
+haunted_elevator.go_up
+haunted_elevator.go_up
+haunted_elevator.go_up
+haunted_elevator.go_up
+haunted_elevator.go_up
+haunted_elevator.go_up
+haunted_elevator.go_up
+haunted_elevator.go_up
+haunted_elevator.go_up
+haunted_elevator.go_up
+haunted_elevator.go_down
+haunted_elevator.go_down
+haunted_elevator.go_down
+haunted_elevator.go_down
+haunted_elevator.go_down
